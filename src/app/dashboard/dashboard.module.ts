@@ -15,54 +15,54 @@ import { DashboardService } from './dashboard.service';
 import { StudentsMarksComponent } from "./students-marks/students-marks.component";
 
 const routes: Routes = [
-	{
-		path: "",
-		component: DashboardComponent,
-		children:[
-			{
-				path: "",
-				redirectTo: "/dashboard/landing",
-				pathMatch: "full"
-			},
-			{
-				path: "landing",
-				component: LandingComponent
-			},
-			{
-				path: "students",
-				component: StudentRecordsComponent
-			},
-			{
-				path: "students-marks",
-				component: StudentsMarksComponent
-			}
-		]
-	},
+    {
+        path: "",
+        component: DashboardComponent,
+        children:[
+            {
+                path: "",
+                redirectTo: "/dashboard/landing",
+                pathMatch: "full"
+            },
+            {
+                path: "landing",
+                component: LandingComponent
+            },
+            {
+                path: "students",
+                component: StudentRecordsComponent
+            },
+            {
+                path: "students-marks",
+                component: StudentsMarksComponent
+            }
+        ]
+    },
 ];
 
 @NgModule({
-	declarations: [
-		DashboardComponent,
-		LandingComponent,
-		SideBarComponent,
-		StudentRecordsComponent
-	],
-	imports: [
-		CommonModule,
-		RouterModule,
-		HttpClientModule,
-		NgbHighlight,
-		NgbDatepickerModule,
-		NgbTypeaheadModule,
-		AgGridModule,
-		FormsModule,
-		ReactiveFormsModule,
-		RouterModule.forChild(
-			routes
-		)
-	],
-	providers: [
-		DashboardService
-	]
+    declarations: [
+        DashboardComponent,
+        LandingComponent,
+        SideBarComponent,
+        StudentRecordsComponent
+    ],
+    imports: [
+        CommonModule,
+        RouterModule,
+        HttpClientModule,
+        NgbHighlight,
+        NgbDatepickerModule,
+        NgbTypeaheadModule,
+        AgGridModule,
+        FormsModule,
+        ReactiveFormsModule,
+        RouterModule.forChild(
+            routes
+        )
+    ],
+    providers: [
+        DashboardService
+    ]
 })
 export class DashboardModule { }

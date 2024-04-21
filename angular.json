@@ -60,6 +60,17 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "students-details:build:development",
+            "port": 4200,
+            "host": "localhost",
+            "open": true,
+            "allowedHosts": [
+              ".localhost"
+            ],
+            "proxyConfig": "proxy.conf.json",
+            "servePath": "/login"
+          },
           "configurations": {
             "production": {
               "buildTarget": "students-details:build:production"

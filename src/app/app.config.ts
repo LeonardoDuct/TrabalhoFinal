@@ -5,7 +5,7 @@ import { routes } from './app.routes';
 import { AuthService } from "./auth/auth.service";
 
 export const appConfig: ApplicationConfig = {
-        providers: [provideRouter(routes),
+    providers: [provideRouter(routes),
         AuthService
     ]
 };
